@@ -1,0 +1,46 @@
+<view class="t-login">
+    <image class="img-b" src="/Image/bj2.png"></image>
+    <view class="t-b">{{ title }}</view>
+    <view class="t-b2">˗ˋˏ♡ˎˊ˗点击登录，即可畅享比赛资源</view>
+    <form class="cl">
+        <view class="t-a">
+            <image src="/Image/loginUser.png"></image>
+            <view class="line"></view>
+            <input type="number" placeholder="请输入账号" maxlength="11"  bindinput="inputAccount" />
+        </view>
+        <view class="t-a">
+            <image src="/Image/loginPassWord.png"></image>
+            <view class="line"></view>
+            <input type="password"  maxlength="16" placeholder="请输入密码" bindinput="inputPassword" />
+        </view>
+        <view class="bottomButton">
+            <l-button shape="semicircle" bindtap="login" type="default">登录</l-button>
+            <l-button shape="semicircle" bindtap="registerButton" plain="{{true}}" type="success">注册</l-button>
+        </view>
+    </form>
+
+
+</view>
+<view class="showMessage">
+    <!-- 显示登录异常的报错信息 -->
+    <l-dialog show="{{showDialog}}" type="alert" show-title="{{true}}" title="{{showTitile}}" title-color="{{titleColor}}" content="{{showBody}}" />
+    <l-toast show="{{showToast}}" icon="error" title="请检查两次密码是否一致" />
+    <l-popup show="{{showRegister}}" content-align="center">
+        <l-card type="primary" plaintext="{{true}}" title="🍍用户注册信息">
+            <form bindsubmit="submitForm">
+            <l-input label="姓名" required="{{true}}" type="text" placeholder="请输入姓名" clear="{{true}}" bind:lininput="inputRegister"  data-input-type="name" />
+            <l-input label="账户" required="{{true}}" type="number" placeholder="请输入用户" clear="{{true}}" bind:lininput="inputRegister" data-input-type="account" />
+            <l-input label="密码" required="{{true}}" type="password" placeholder="请输入密码" clear="{{true}}"   bind:lininput="inputRegister" data-input-type="password" />
+            <l-input label="重复密码" required="{{true}}" type="password" placeholder="请输入重复" clear="{{true}}" bind:lininput="inputRegister" data-input-type="confirm_password" />
+            <l-input label="邮箱" required="{{true}}" type="text" placeholder="请输入邮箱" clear="{{true}}"  bind:lininput="inputRegister" data-input-type="email" />
+            <l-input label="电话" required="{{true}}" type="text" placeholder="请输入手机号" clear="{{true}}"  bind:lininput="inputRegister" data-input-type="phoneNumber" />
+            <l-input label="学院" required="{{true}}" type="text" placeholder="请输入学院" clear="{{true}}"  bind:lininput="inputRegister" data-input-type="college_name" />
+            <l-input label="专业" required="{{true}}" type="text" placeholder="请输入专业" clear="{{true}}"  bind:lininput="inputRegister" data-input-type="major_name" />
+            <l-input label="班级" required="{{true}}" type="text" placeholder="请输入班级" clear="{{true}}"  bind:lininput="inputRegister" data-input-type="class_name" />
+            <view class="registerButton">
+                <l-button shape="semicircle" form-type="submit" plain="{{true}}" type="error" bindtap="registerForm">确定</l-button>
+            </view>
+        </form>
+        </l-card>
+    </l-popup>
+</view>
