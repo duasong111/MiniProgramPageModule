@@ -1,0 +1,11 @@
+{
+	"navigationBarTitleText": "登录",
+	"usingComponents": {
+	  "l-button":"../../miniprogram_npm/lin-ui/button/index",
+		"l-card":"../../miniprogram_npm/lin-ui/card/index",
+		"l-dialog":"../../miniprogram_npm/lin-ui/dialog/index",
+		"l-popup":"../../miniprogram_npm/lin-ui/popup/index",
+		"l-input":"../../miniprogram_npm/lin-ui/input/index",
+		"l-toast":"../../miniprogram_npm/lin-ui/toast/index"
+	}
+  }
