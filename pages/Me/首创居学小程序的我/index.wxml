@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="avatar-container">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </view>
+  <view class="username">{{username}}</view>
+  <view class="box-container">
+    <!-- 左侧的框的功能设置 -->
+    <view class="left-box">
+      <view class="left-box-setting">
+        联系我们>
+      </view>
+      <view class="left-box-setting">
+        常见问题>
+      </view>
+    </view>
+    <view class="right-box">
+    
+    待开发
+    
+    </view>
+  </view>
+  <view class="setting">
+    <l-card type="primary" plaintext="{{true}}" title="🍍功能框">
+      <view class="content">
+        <view class="button-container">
+
+          <button class="button" bindtap="setting">设置</button>
+          <button class="button">团队成员</button>
+          <button class="button" bindtap="learnMore">了解更多</button>
+        </view>
+      </view>
+    </l-card>
+  </view>
+</view>
