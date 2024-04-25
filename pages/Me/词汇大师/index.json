@@ -1,0 +1,8 @@
+{
+    "usingComponents": {},
+    "navigationBarTitleText": "词汇大师",
+    "navigationBarBackgroundColor": "#EAECF9",
+    "backgroundColorTop": "left",
+    "enablePullDownRefresh": false,
+    "navigationBarTextStyle":"black"
+}
