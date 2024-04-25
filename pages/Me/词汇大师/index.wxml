@@ -1,0 +1,126 @@
+<view class="mainPage">
+    <view class="page1">
+        <view class="content" wx:for="{{imagsult}}" wx:key="index" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;">
+            <image bindload="imageLoad" data-index="{{ index }}" src="https://www.bing.com/{{item.url}}"></image>
+            <!-- 小的字体样式更改 -->
+            <view class="fontStyle">
+                <view class="imagTitle">“{{item.title}}”:{{item.copyright}}</view>
+                <!-- <view class="imagIssue">{{item.copyright}}</view> -->
+            </view>
+            <!-- 小的字体样式的分割线 -->
+            <view class="phaseBeautyRule">
+                <text class="phaseBeauty">{{ReturnSentence.content}}</text>
+            </view>
+            <!-- 对每日一词的设计的分割线 -->
+            <view class="toolBeautify">
+                <text class="toolFont">搜索单词</text>
+            </view>
+            <view class="searchWord">
+                <view class="searchType">
+                    <view class="searchDetail" >
+                        <input bindinput='getInputValue' name='price' type='text' placeholder='输入内容' />
+                        <button bindtap="search">查</button>
+                    </view>
+                   
+                    <view wx:if="{{showExplain}}">
+                        <view class="searchDetail">
+                            <text class="searchWordbeauty">
+                                音标:[{{backResultWord.pronounce}}]
+                              </text>
+                        </view>
+                        <view class="searchDetail">
+                            <text class="paraphrase">{{backResultWord.type}},{{backResultWord.explain}}</text>
+                        </view>
+
+                        <view class="searchDetail">
+                            <text class="paraphrase">{{backResultWord.exampleSentence}}</text>
+                        </view>
+                        <view class="searchDetail">
+                            <text class="paraphrase">{{backResultWord.exampleSentenceChinese}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <!-- 上边是对每日单词的完善 -->
+            <view class="toolBeautify">
+                <text class="toolFont">工具箱</text>
+            </view>
+
+            <!-- 下面是是工具栏的操作 -->
+            <view class="weui-grids">
+                <view class="weui-grid">
+                    <!-- 坐标是0.0 -->
+                    <navigator url="/pages/TranslationPage/TranslationPage">
+                        <view class="me-about">
+                            <text>翻译</text>
+                            <image class="imageList" src="/Imag/alimt 机器翻译.png"></image>
+                        </view>
+                    </navigator>
+                </view>
+                <!-- 坐标是0.1 -->
+                <view class="weui-grid">
+                    <navigator url="/pages/PK/index">
+                        <view class="me-about">
+                            <text>爱PK</text>
+                            <image class="imageList" src="/Imag/PK.png"></image>
+                        </view>
+                    </navigator>
+                </view>
+                <!-- 坐标是0.2 -->
+                <view class="weui-grid">
+                    <navigator url="/pages/GuessTheWord/GuessTheWord">
+                        <view class="me-about">
+                            <text>猜词</text>
+                            <image class="imageList" src="/Imag/飞机.png"></image>
+                        </view>
+                    </navigator>
+                </view>
+                <!-- 坐标是0.3 -->
+                <view class="weui-grid">
+                    <navigator url="/pages/Tools/HeatWord/HeatWord">
+                        <view class="me-about">
+                            <text>热词</text>
+                            <image class="imageList" src="/Imag/燃脂.png"></image>
+                        </view>
+                    </navigator>
+                </view>
+                <!-- 坐标是1.0 -->
+                <view class="weui-grid">
+                    <navigator url="/pages/Tools/Tools">
+                        <view class="me-about">
+                            <text>木鱼</text>
+                            <image class="imageList" src="/Imag/开心.png"></image>
+                        </view>
+                    </navigator>
+                </view>
+                <!-- 坐标是1.1 -->
+                <view class="weui-grid">
+                    <navigator url="/pages/Tools/Riddle/Riddle">
+                        <view class="me-about">
+                            <text>谜语</text>
+                            <image class="imageList" src="/Imag/炸弹 (1).png"></image>
+                        </view>
+                    </navigator>
+                </view>
+                <!-- 坐标是1.2 -->
+                <view class="weui-grid">
+                    <navigator url="/pages/Tools/community/community">
+                        <view class="me-about">
+                            <text>社区</text>
+                            <image class="imageList" src="/Imag/讨论.png"></image>
+                        </view>
+                    </navigator>
+                </view>
+                <!-- 坐标是1.3 -->
+                <view class="weui-grid">
+                    <navigator url="">
+                        <view class="me-about">
+                            <text>待更新</text>
+                            <image class="imageList" src="/Imag/更新 (1).png"></image>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
