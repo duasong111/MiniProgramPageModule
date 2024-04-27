@@ -1,0 +1,146 @@
+@import './icon.wxss';
+page{
+  background: #ffffff;
+}
+/* 搜索框的设置 */
+.searchbar{
+  width: 100%;
+  height: 60rpx;
+}
+/*总体主盒子*/
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #939393;
+}
+ 
+/*左侧栏主盒子*/
+.nav_left{
+  /*设置行内块级元素（没使用定位）*/
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  /*主盒子设置背景色为灰色*/
+  background: #F7F7F7;
+  text-align: center;
+ 
+
+}
+/*左侧栏list的item*/
+.nav_left .nav_left_items{
+  height: 50px;
+  /*垂直居中*/
+  line-height: 48px;
+  /*再设上下padding增加高度，总高42px*/
+  padding: 6px 0;
+  /*只设下边线*/
+  border-bottom: 1px solid #f5f5f5;
+  /*文字14px*/
+  font-size: 17px;
+  color: #808080;
+  box-shadow: 0 2px 4px rgba(168, 162, 162, 0.2);
+}
+/*左侧栏list的item被选中时*/
+.nav_left .nav_left_items.active{
+  /*背景色变成白色*/
+  background: #FFFFFF;
+  color: #6B66DE;
+  border-left: 4px solid rgb(107,102,222);
+}
+ 
+/*右侧栏主盒子*/
+.nav_right{
+  /*右侧盒子使用了绝对定位*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex: 1;
+  /*宽度75%，高度占满，并使用百分比布局*/
+  width: 75%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+  margin-top: 30rpx;
+}
+
+/* 对里边的卡片页面的设置显示 */
+/* .nav_right .crad{
+  margin: 50rpx;
+} */
+.projectTitle{
+  font-size: 32rpx;
+  color: rgb(95, 122, 195);
+}
+/* 对pop展示的设置 */
+.displayFloatingWindow{
+  padding: 20rpx;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  width: 90%;
+  /* height: 300rpx; */
+  margin-bottom: 60%;
+  background-color: rgb(255, 255, 255);
+}
+/* 对pop中的项目名进行设置 */
+.projecName{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #efe9e9;
+  padding: 5rpx;
+  border-radius: 15rpx;
+}
+/* 项目负责人 */
+.projecLeader{
+  display: flex;
+  align-items: center;
+  padding: 8rpx;
+  border-bottom: 1px solid #736d6d;
+  margin-left: 6%;
+  margin-right: 6%;
+
+}
+.projecLeader .leaderName{
+  margin-left: 2%;
+  
+}
+/* 团队成员 */
+.projectTeam{
+  display: flex;
+  align-items: center;
+  padding: 8rpx;
+  border-bottom: 1px solid #736d6d;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+.showName{
+  display: flex;
+  justify-content: space-between;
+}
+.showName .role{
+  width: 400rpx;
+  /* background-color: brown; */
+  display: flex;
+  align-items: center;
+  }
+.showName .divideTheWork{
+  width: 60%;
+  
+  align-items: center;
+}
+/* 关于详细信息展开 */
+.describe{
+  margin-top: 10rpx;
+ 
+  /* background-color: brown; */
+  border-radius: 12rpx;
+  padding: 12rpx;
+  border: 5rpx solid #419fd1;
+
+}
