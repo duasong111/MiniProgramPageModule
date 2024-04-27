@@ -1,0 +1,55 @@
+<view class="searchbar">
+  <l-search-bar placeholder="搜索项目名" shape="circle" show-cancel="{{trul}}" />
+</view>
+<view class="container">
+
+  <!--左侧栏-->
+  <view class="nav_left">
+    <block wx:for="{{navLeftItems}}">
+      <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-left-index="{{index}}" data-id="{{item.id}}">{{item.data.title}}</view>
+    </block>
+  </view>
+  <!--右侧栏-->
+  <view class="nav_right">
+    <view wx:if="{{navRightItems[curIndex][0]}}">
+      <view class="crad" wx:for="{{navRightItems[curIndex]}}">
+        <l-card bindtap="getDetail" data-right-index="{{index}}" type="primary" plaintext="{{true}}" title="">
+          <view class="projectTitle"> 项目名称: {{item.name}}</view>
+          <view class="content">
+            {{item.description}} {{item.time}}
+          </view>
+        </l-card>
+      </view>
+    </view>
+    <view wx:else>该领域可能还没有项目供于对外展示哦</view>
+  </view>
+</view>
+<l-popup show="{{showPoP}}" content-align="bottom">
+  <view class="displayFloatingWindow">
+    <view class="projecName">
+      <icon class="iconfont icon-chuangan" ></icon>项目:{{selectedItem.name}}
+    </view>
+
+    <view class="projecLeader">
+      <icon class="iconfont icon-datou" ></icon>
+      <view class="leaderName">
+        队长~{{selectedItem.head}}
+      </view>
+    </view>
+
+
+    <view class="projectTeam" wx:for="{{selectedItem.team_composition}}">
+      <view class="showName">
+        <view class="role">
+          <icon class="iconfont icon-fenche"></icon>成员:{{item.name}}
+        </view>
+        <view class="divideTheWork">
+          <icon class="iconfont icon-cehua"></icon>分工:{{item.role}}
+        </view>
+      </view>
+    </view>
+    <view class="describe">
+      {{selectedItem.description}}
+    </view>
+  </view>
+</l-popup>
