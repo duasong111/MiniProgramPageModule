@@ -1,0 +1,68 @@
+<!-- <l-notice-bar show="{{true}}"  type="roll" speed="2000">我是通告栏</l-notice-bar> -->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class="carouselChart">
+    <swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}" interval="3000" indicator-color="#afafb0" indicator-active-color="#ffffff">
+      <swiper-item wx:for="{{imagsult}}" wx:key="index" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx; justify-content:center;align-items:center;display: flex;">
+        <image mode="widthFix" src="https://www.bing.com/{{item.url}}" />
+        <view class="content">{{item.copyright}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 展示的则是下边俩不对称的框 -->
+  <view class="box-bottom">
+    <view bindtap="personnelDetails" class="left-box">
+      <!-- 在这个里边去进行连接至人员简介 -->
+      <view class="showFont">
+        <icon class="iconfont icon-monkey" />
+        <view class="fontbeauty">团队组成</view>
+      </view>
+    </view>
+    <view bindtap="awardPresentation" class="right-box">
+      <view class="showFont">
+        <icon class="iconfont icon-fengche" />
+        <view class="fontbeauty">获奖展示</view>
+      </view>
+    </view>
+  </view>
+  <!-- 展示工作室的进行新闻 -->
+  <view class="showNews">
+    <view class='topTabSwiper'>
+      <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>首创新闻</view>
+      <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>比赛通知</view>
+    </view>
+    <swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+      <swiper-item>
+        <!-- 现在这俩是一样的，要进行修改,给其变成不一样的 -->
+        <view class='swiperNews'>
+          <!-- 展示比赛的有关信息 -->
+          <view wx:for="{{getNews}}" wx:key="index" class='swiperNews' wx:if="{{item.is_show}}">
+            <l-card type="primary" plaintext="{{true}}" title="✨ {{item.title}} ">
+              <view class="swiperContent">
+                {{item.content}}
+              </view>
+              <view class="card_time ">
+                <icon class="iconfont icon-shijian"></icon>{{item.dates}}
+              </view>
+            </l-card>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='swiper_con'>
+          <!-- 展示比赛的有关信息 -->
+          <view wx:for="{{getCompetitionNotifications}}" wx:key="index" class='swiper_con' wx:if="{{item.is_show}}">
+            <l-card type="primary" plaintext="{{true}}" title="📢 {{item.title}}">
+              <view class="noticeContent">
+                {{item.content}}
+              </view>
+              <view class="card_time ">
+                <icon class="iconfont icon-shijian"></icon>{{item.date}}
+              </view>
+            </l-card>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
