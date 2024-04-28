@@ -1,0 +1,14 @@
+{
+  "navigationBarBackgroundColor": "#cdd1d3",
+  "navigationBarTitleText": "主页",
+  "usingComponents": {
+    "l-grid":"../../miniprogram_npm/lin-ui/grid/index",
+    "l-grid-item":"../../miniprogram_npm/lin-ui/grid-item/index",
+    "l-capsule-bar":"/miniprogram_npm/lin-ui/capsule-bar/index",
+    "l-button":"/miniprogram_npm/lin-ui/button/index",
+    "l-segment":"/miniprogram_npm/lin-ui/segment/index",
+    "l-notice-bar":"../../miniprogram_npm/lin-ui/notice-bar/index",
+    "l-segment-item":"../../miniprogram_npm/lin-ui/segment-item/index",
+    "l-card":"../../miniprogram_npm/lin-ui/card/index"
+  }
+}
