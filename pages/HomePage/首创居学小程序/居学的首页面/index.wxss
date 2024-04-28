@@ -1,0 +1,214 @@
+@import './icon.wxss';
+
+
+
+.showNotice{
+  width: 90%;
+ 
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    /* justify-content: center;
+  align-items: center; */
+}
+
+
+/* 首页面展示的一个框框 */
+.box {
+    width: 90%;
+    height: 300rpx;
+    border-radius: 20rpx;
+    border: 5rpx red solid;
+
+    overflow: hidden;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* 轮播图 */
+.carouselChart {
+  width: 95%;
+  height: 400rpx;
+  margin: 0 auto;
+  border-radius: 8rpx;
+  display: flex;
+  position: relative;
+}
+swiper{
+  width: 100%;
+  height: calc(100vw*442/810);
+}
+.carouselChart image{
+border-radius: 20rpx;
+  width: 97%;
+  height: 380rpx;
+  box-shadow: 0 0.1px 1px rgba(0, 0, 0, 0.3);
+}
+/* 将字显示在图片上 */
+.carouselChart .content {
+  position: absolute;
+  bottom: 18px;
+  left: 4%;
+  color: #fff;
+  font-size: 14px;
+}
+
+
+
+
+/* 展示出新闻框内部的东西 */
+.box-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(249, 250, 251);
+}
+/* 展示不对称的框框 */
+.box-bottom{
+    height: 200rpx;
+    width: 90%;
+    border-radius: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    /* margin: 3%; */
+    padding: 1.5%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+/* 人员详情展示 */
+.left-box{
+   
+   height: 90%;
+   width: 40%;
+   border-radius: 20px;
+   background-color: #f0945d;
+    
+}
+/* 展示团队的组成 */
+.showFont{
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* 设置为垂直方向的弹性布局 */
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.fontbeauty{
+  color: rgb(92, 90, 90);
+  font-size: 30rpx;
+  font-weight: 600;
+  margin: 5rpx;
+  font-family:Cambria, Cochin, Georgia, Times, ‘Times New Roman’, serif;
+}
+/* 所获奖项 */
+.right-box{
+    height: 90%;
+    width: 56%;
+    border-radius: 20px;
+    background-color: #55bb8a;
+    /* margin-right: 5%; */
+}
+image{
+  width: 30%;
+  
+}
+.showNews{
+  width: 100%;
+  height: 40%;
+}
+/* 用做展示切换的页面设置 */
+.tab {
+  float: left;
+  width: 33.3333%;
+  text-align: center;
+  padding: 5rpx 0;
+  margin: -3% 0 0 -5%; /* 上 右 下 左 */
+}
+
+.topTabSwiper {
+  /* border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;  */
+   zoom: 1;
+   /* background-color: dodgerblue; */
+   /* border-radius: 18rpx; */
+}
+ 
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+ 
+/* 这个是给选中的来进行色彩化的渲染 */
+/* 这个是对那两个选项的渲染 */
+.tabBorer {
+  position: relative;
+  display: inline-block;
+  color: rgb(24, 25, 26);
+  font-weight: 500;
+  font-size:38rpx;
+  color: #3683d6;
+  font-family: Cambria, Cochin, Georgia, Times, ‘Times New Roman’, serif;
+  margin-bottom: 18rpx;
+}
+
+.tabBorer::after {
+  content: "\e606";
+  font-family: "iconfont"; /* 假设你已引入相应的字体库 */
+  font-size: 32px;
+  color: rgb(82, 144, 214);
+  position: absolute;
+  bottom: -35rpx; /* 调整图标相对于文本的垂直位置 */
+  left: 0; /* 调整图标的水平位置 */
+  margin-left: 95rpx;
+}
+/* 首创新闻 */
+.swiperNews {
+  width: 100%;
+  padding: 15rpx 0;
+  background-color: rgb(255, 255, 255);
+}
+.swiperContent{
+   
+    padding: 12rpx;
+    font-size: 32rpx;
+    font-family: cursive;
+}
+.card-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #22a2c3;
+	font-family:Georgia, ‘Times New Roman’, Times, serif;
+}
+/* 比赛通知来进行设置 */
+.swiper_con {
+  width: 100%;
+  padding: 15rpx 0;
+  background-color: rgb(255, 255, 255);
+}
+.card_time{
+    margin-left: 60%;
+    /* margin: 5rpx; */
+		margin-top: 10rpx;
+		color: #93b5cf;
+}
+.noticeContent{
+  padding: 12rpx;
+  font-size: 32rpx;
+  font-family:‘Times New Roman’, Times, serif;
+}
+/* 引入时间的图标 */
+.time {
+  content: "\e606";
+  font-family: "iconfont"; /* 假设你已引入相应的字体库 */
+  font-size: 32px;
+  color: rgb(82, 144, 214);
+  
+}
