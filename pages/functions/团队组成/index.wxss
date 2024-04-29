@@ -1,0 +1,43 @@
+/*引入阿里矢量图标 */
+@import './icon.wxss';
+
+/* 标题上部分展示 */
+.title{
+  width: 90%;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f0945d;
+  padding: 16rpx;
+  border-radius: 8px;  /* 圆角卡片 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);  /* 卡片阴影 */
+}
+/* 下部分展示 */
+.container_grid{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.text{
+  margin-left: 10rpx;
+}
+/* 展示详细数据的背景图片展示 */
+.grid-item-card{
+  /* background-color: aquamarine; */
+  background-color: #ffffff;  /* 卡片背景色 */
+  border-radius: 8px;  /* 圆角卡片 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);  /* 卡片阴影 */
+  padding: 16px;  /* 卡片内边距 */
+}
+.grid-item-name{
+/* background-color: rgb(216, 198, 198); */
+}
