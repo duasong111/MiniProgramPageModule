@@ -1,0 +1,25 @@
+<view class="title">
+团队成员展示
+</view>
+<!-- 现在只是将所有的数据来进行展示出来，后续是提供可选择年级或添加可特定搜索功能 -->
+<view class="container_grid">
+
+  <l-grid l-class="grid"  show-row-border="true">
+    <l-grid-item 
+      wx:for="{{teamMembers}}" wx:key="{{index}}" key="{{index}}" slot="{{index}}">
+      <view class="grid-item-card">
+        <view class="grid-item-name">
+          <icon class="iconfont icon-xingming" />:
+        {{item.name}}</view>
+        <view class="grid-item-college">{{item.college_name}}</view>
+        <view class="grid-item-major">🍿{{item.major_name}}</view>
+        <view class="grid-item-class">
+          <icon class="iconfont icon-banji" />
+        {{item.class_name}}</view>
+      </view>
+        
+    </l-grid-item>
+</l-grid>
+
+</view>
+
